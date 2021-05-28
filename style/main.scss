@@ -1,0 +1,134 @@
+// @import 'https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css';
+
+@mixin addHover($color) {
+  background-color: white !important;
+  color: $color;
+  border: 1px solid $color;
+}
+
+@mixin inverted() {
+  filter: invert(0);
+}
+
+$dark-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+$light-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+
+$dark: #2c2c2c;
+$blue: #045d91;
+$purp: #580554;
+$hot: #eb540e;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: 'Monaco' !important;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.is-avatar {
+  box-shadow: $dark-shadow;
+  &:hover {
+    box-shadow: $light-shadow;
+    transform: translateY(-3px) scale(1.05);
+  }
+}
+
+.button {
+  font-weight: 600 !important;
+  transition: all 0.5s ease-in;
+  box-shadow: $light-shadow;
+
+  &:hover {
+    transform: scale(1.05) !important;
+    box-shadow: $dark-shadow;
+  }
+
+  &.is-info {
+    background-color: $blue;
+    &:hover {
+      @include addHover($blue);
+      a svg {
+        @include inverted();
+      }
+    }
+  }
+
+  &.is-link {
+    background-color: $purp;
+    &:hover {
+      @include addHover($purp);
+      a svg {
+        filter: invert(1);
+      }
+    }
+  }
+
+  &.is-dark {
+    background-color: $dark !important;
+
+    &:hover {
+      @include addHover($dark);
+      a svg {
+        @include inverted();
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .reverse-columns {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+}
+
+.is-link {
+  color: $hot !important;
+}
+
+.is-typed {
+  font-size: 36px;
+}
+
+.titled {
+  font-size: 50px !important;
+  font-weight: 400 !important;
+  line-height: 64px !important;
+}
+
+.subtitled {
+  font-size: 22px !important;
+  font-weight: 400 !important;
+  line-height: 36px !important;
+}
+
+#strikeout:hover {
+  text-decoration: underline;
+  animation-name: strikeout;
+  animation-duration: 250ms;
+  animation-iteration-count: 2;
+}
+
+@keyframes strikeout {
+  20% {
+    text-decoration: overline;
+  }
+  40% {
+    text-decoration: line-through;
+  }
+  60% {
+    text-decoration: transparent;
+    color: transparent;
+  }
+  80% {
+    text-decoration: line-through;
+  }
+  100% {
+    text-decoration: underline;
+  }
+}
