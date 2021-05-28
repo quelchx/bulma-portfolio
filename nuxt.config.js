@@ -2,8 +2,8 @@ export default {
   target: "static",
   ssr: false,
   head: {
-    title: "Title",
-    titleTemplate: "Title Template",
+    title: "Eric Quelch",
+    titleTemplate: "Full Stack Developer",
     htmlAttrs: {
       lang: "en",
       amp: true
@@ -12,9 +12,9 @@ export default {
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        hid: "HID",
-        name: "Name",
-        content: "Content Description"
+        hid: "Eric Quelch - Full Stack Developer",
+        name: "Personal Portfolio + Resume",
+        content: "Information about Eric Quelch - Full Stack Developer"
       }
     ],
     script: [

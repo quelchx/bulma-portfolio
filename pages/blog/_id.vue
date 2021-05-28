@@ -27,6 +27,19 @@ import AOS from '@/components/AOS.vue'
 import Loading from '@/components/utils/Loading.vue'
 export default {
   components: { AOS, Loading },
+  head() {
+    return {
+      title: `${this.post.title}`,
+      titleTemplate: `${this.post.title} - Article by Eric Quelch`,
+       meta: [
+        {
+          hid: `${this.post.title}`,
+          name: `${this.post.title} - ${this.post.description}`,
+          content: `${this.post.content}`
+        }
+      ]
+    }
+  },
   async mounted() {
     try {
       let res = await fetch(

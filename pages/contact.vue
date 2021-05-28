@@ -31,5 +31,18 @@ import AOS from '../components/AOS.vue'
 import SocialLinks from '../components/SocialLinks.vue'
 export default {
   components: { Hero, AOS, Form, SocialLinks },
+  head() {
+    return {
+      title: 'Contact Eric Quelch',
+      titleTemplate: 'Contact Eric Quelch',
+       meta: [
+        {
+          hid: `Eric Quelch - Contact`,
+          name: `Contact Eric Quelch`,
+          content: `Contact Eric Quelch throught this form or by email`
+        }
+      ]
+    }
+  }
 }
 </script>

@@ -84,6 +84,19 @@ import Loading from '@/components/utils/Loading.vue'
 
 export default {
   components: { AOS, Loading },
+  head() {
+    return {
+      title: 'Articles and Guides',
+      titleTemplate: 'Articles and Guides',
+       meta: [
+        {
+          hid: `Eric Quelch - Articles and Guides`,
+          name: `Articles and Guides by Eric Quelch`,
+          content: `Read articles and guides writen by Eric Quelch`
+        }
+      ]
+    }
+  },
   async beforeCreate() {
     try {
       let res = await fetch(process.env.url)
