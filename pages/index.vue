@@ -240,61 +240,72 @@
 </template>
 
 <script>
-import Hero from '@/components/Hero.vue'
-import AOS from '@/components/AOS.vue'
-import VueLogo from '@/assets/VueLogo.vue'
-import TypeWriter from '@/components/utils/TypeWriter.vue'
-import GithubLogo from '@/assets/GithubLogo.vue'
-import SocialLinks from '@/components/SocialLinks.vue'
+import Hero from "@/components/Hero.vue";
+import AOS from "@/components/AOS.vue";
+import VueLogo from "@/assets/VueLogo.vue";
+import TypeWriter from "@/components/utils/TypeWriter.vue";
+import GithubLogo from "@/assets/GithubLogo.vue";
+import SocialLinks from "@/components/SocialLinks.vue";
 
 export default {
+  head() {
+    return {
+      meta: [
+        {
+          hid: `Eric Quelch's personal portfolio and resume`,
+          name: `Eric Quelch's landing page for personal portfolio and resume`,
+          content: `Information about Eric Quelch and his experience with web development`
+        }
+      ]
+    };
+  },
   components: {
     AOS,
     Hero,
     TypeWriter,
     VueLogo,
     GithubLogo,
-    SocialLinks,
+    SocialLinks
   },
   data() {
     return {
       arr: [
-        'Full Stack Web Developer',
-        'Tutor',
-        'Geek',
-        'Team Leader',
-        'Is Hilarious',
-        'Passionate',
-        'Dedicated',
-        'I am Eric Quelch',
+        "Full Stack Web Developer",
+        "Tutor",
+        "Geek",
+        "Team Leader",
+        "Is Hilarious",
+        "Passionate",
+        "Dedicated",
+        "I am Eric Quelch"
       ],
       looking: [
-        'developer and design',
-        'illustrations, animations and effects',
-        'search engine optimization',
-        'backend solutions, authorization, security',
-        'e-commerence and payment methods',
-        'leadership, support, problem solving, and clever thinking',
-        'I am much, much more -- improving each and everyday!',
+        "developer and design",
+        "illustrations, animations and effects",
+        "search engine optimization",
+        "backend solutions, authorization, security",
+        "e-commerence and payment methods",
+        "leadership, support, problem solving, and clever thinking",
+        "I am much, much more -- improving each and everyday!"
       ],
       counter: 0,
-      solved: false,
-    }
+      solved: false
+    };
   },
   methods: {
     egg() {
-      console.log(this.counter)
-      this.counter++
+      console.log(this.counter);
+      this.counter++;
       if (this.counter >= 10) {
-        return (this.solved = !this.solved), (this.counter = 0)
+        return (this.solved = !this.solved), (this.counter = 0);
       }
     },
     close() {
-      document.querySelector('#modal').className = 'modal'
-      return (this.solved = !this.solved)
-    },
-  },
-}
+      document.querySelector("#modal").className = "modal";
+      return (this.solved = !this.solved);
+    }
+  }
+};
 </script>
 
 <style lang="scss">

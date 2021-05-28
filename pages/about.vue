@@ -88,7 +88,7 @@ export default {
       titleTemplate: 'About Eric Quelch',
        meta: [
         {
-          hid: `Eric Quelch - Contact`,
+          hid: `Information about Eric Quelch - Projects and Contributions`,
           name: `About Eric Quelch`,
           content: `Information about Eric Quelch`
         }
@@ -120,7 +120,7 @@ export default {
           desc: 'Platform for Memes',
         },
       ],
-      lib: ['Vue', 'Vite', 'Bulma', 'Sass', 'AOS'],
+      lib: ['Nuxt.js', 'Buefy', 'Sass', 'AOS.js', 'Marked.js'],
       files: [
         '60+ files',
         '1.9MB',

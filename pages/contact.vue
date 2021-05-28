@@ -37,7 +37,7 @@ export default {
       titleTemplate: 'Contact Eric Quelch',
        meta: [
         {
-          hid: `Eric Quelch - Contact`,
+          hid: `Contact Eric Quelch through this form or by email`,
           name: `Contact Eric Quelch`,
           content: `Contact Eric Quelch throught this form or by email`
         }
