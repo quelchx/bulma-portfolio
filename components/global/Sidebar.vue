@@ -5,13 +5,13 @@
     </transition>
     <transition name="slide-side">
       <div v-if="show" class="menu-navbar">
-        <router-link class="title is-3" to="/">quelch()</router-link>
+        <nuxt-link class="title is-3" to="/">quelch()</nuxt-link>
         <ul class="menu-list" @click="$emit('close')">
           <div v-for="(route, index) in routes" :key="index">
             <li>
-              <router-link :to="route.path" class="navbar-item">
+              <nuxt-link :to="route.path" class="navbar-item">
                 {{ route.name }}
-              </router-link>
+              </nuxt-link>
             </li>
           </div>
         </ul>
