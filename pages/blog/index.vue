@@ -100,10 +100,8 @@ export default {
   async beforeCreate() {
     try {
       let res = await fetch(process.env.url)
-      let data = await res.json()
-      for (let i = data.length - 1; i >= 0; i--) {
-        this.posts.push(data[i])
-      }
+      this.posts = await res.json()
+      return this.posts.reverse()
     } catch (error) {
       this.err = error
     }
