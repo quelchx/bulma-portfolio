@@ -31,9 +31,17 @@ export default {
     fallback: true
   },
   modules: ["@nuxtjs/pwa", 'nuxt-buefy',],
-  plugins: [],
+  plugins: ['~/lib/init.js', '~/plugins/aos.js'],
   env: {
-    url: process.env.HEROKU_API
+    url: process.env.HEROKU_API,
+    api_key: process.env.FB_API_KEY,
+    auth_domain: process.env.FB_AUTH_DOMAIN,
+    project_id: process.env.FB_PROJECT_ID,
+    bucket: process.env.FB_STORAGE_BUCKET,
+    msg_sender_id: process.env.FB_MSG_SENDER_ID,
+    app_id: process.env.FB_APP_ID,
+    measurement_id: process.env.FB_MEASUREMENT_ID
+
   },
   pwa: {
     // have to assign a custom icon for this eventually

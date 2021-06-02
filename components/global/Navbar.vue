@@ -10,35 +10,82 @@
     <div class="navbar-menu">
       <div class="navbar-end">
         <div v-for="(route, index) in routes" :key="index">
-          <nuxt-link :to="route.path" class="navbar-item" id='strikeout'>
-            {{ route.name }}
-          </nuxt-link>
+          <Tooltip :message="route.tip">
+            <nuxt-link :to="route.path" class="navbar-item" id="strikeout">
+              {{ route.name }}
+            </nuxt-link>
+          </Tooltip>
         </div>
+        <Tooltip message="Register a Free Account">
+          <nuxt-link
+            to="/register"
+            class="navbar-item"
+            id="strikeout"
+            v-if="!user.loggedIn"
+            >.register()</nuxt-link
+          >
+        </Tooltip>
+        <Tooltip message="Login to your account">
+          <nuxt-link
+            v-if="!user.loggedIn"
+            to="/login"
+            class="navbar-item"
+            id="strikeout"
+            >.login()
+          </nuxt-link>
+        </Tooltip>
+        <Tooltip message="Logout?">
+          <a
+            @click="signout"
+            href="#"
+            class="navbar-item"
+            id="strikeout"
+            v-if="user.loggedIn"
+            >.logout()</a
+          >
+        </Tooltip>
       </div>
     </div>
   </nav>
 </template>
 
 <script>
-import Hamburger from '../utils/Hamburger.vue'
+import firebase from 'firebase'
+import { mapGetters } from 'vuex'
+import Hamburger from './Hamburger.vue'
+import Tooltip from '../utils/Tooltip.vue'
 export default {
   name: 'Navbar',
-  components: { Hamburger },
+  components: { Hamburger, Tooltip },
+  computed: { ...mapGetters({ user: 'user' }) },
+  methods: {
+    signout() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$router.go(this.$router.currentRoute)
+        })
+    },
+  },
   data() {
     return {
       routes: [
         {
           path: '/about',
           name: '.me()',
+          tip: 'About Eric Quelch',
         },
         {
           path: '/contact',
           name: '.contact()',
+          tip: 'Contact Me?',
         },
         {
           path: '/blog',
-          name: '.articles()'
-        }
+          name: '.articles()',
+          tip: 'Guides and Articles',
+        },
       ],
     }
   },
@@ -47,9 +94,10 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-  margin: 20px 30px;
+  padding: 20px 30px;
+  font-family: 'Monaco' !important;
 }
 .navbar-item {
-  font-size: 24px;
+  font-size: 20px;
 }
 </style>

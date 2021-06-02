@@ -3,7 +3,7 @@
     <figure class="image is-5by3">
       <img
         @click="redirect(path)"
-        src="https://i.ibb.co/fq8hSGQ/placeholder-image-368x246.png"
+        :src="img"
       />
     </figure>
     <h2 class="subtitle pt-4">{{ title }}</h2>
@@ -18,7 +18,7 @@ import Link from './utils/Link.vue'
 export default {
   name: 'Article',
   components: { Link },
-  props: ['path', 'title', 'desc'],
+  props: ['path', 'title', 'desc', 'img'],
   methods: {
     redirect(path) {
       location.href = path

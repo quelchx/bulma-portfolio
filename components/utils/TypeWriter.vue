@@ -75,6 +75,7 @@ export default {
 
 <style lang="scss">
 .is-typed {
+  font-family: 'Monaco';
   span.typed {
     color: steelblue;
   }

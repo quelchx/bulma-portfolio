@@ -1,4 +1,5 @@
 // @import 'https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 @mixin addHover($color) {
   background-color: white !important;
@@ -23,12 +24,30 @@ $hot: #eb540e;
 *::after {
   margin: 0;
   padding: 0;
-  font-family: 'Monaco' !important;
 }
 
 body {
   box-sizing: border-box;
+  font-family: 'Monaco';
+  font-size: 18px;
 }
+
+.footer {
+  background-color: white;
+}
+
+.is-rounded {
+  border-radius: 12px;
+}
+
+// #main, .navbar, .footer {
+//   color: white;
+//   background-color: $dark;
+// }
+
+// .navbar-item, h1, h2 {
+//   color: white !important;
+// }
 
 .is-avatar {
   box-shadow: $dark-shadow;
@@ -42,6 +61,8 @@ body {
   font-weight: 600 !important;
   transition: all 0.5s ease-in;
   box-shadow: $light-shadow;
+  font-family: 'Monaco' !important;
+
 
   &:hover {
     transform: scale(1.05) !important;
@@ -60,6 +81,7 @@ body {
 
   &.is-link {
     background-color: $purp;
+
     &:hover {
       @include addHover($purp);
       a svg {
@@ -96,12 +118,14 @@ body {
 }
 
 .titled {
+  font-family: 'Monaco' !important;
   font-size: 50px !important;
   font-weight: 400 !important;
   line-height: 64px !important;
 }
 
 .subtitled {
+  font-family: 'Monaco' !important;
   font-size: 22px !important;
   font-weight: 400 !important;
   line-height: 36px !important;

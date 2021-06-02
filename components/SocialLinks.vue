@@ -6,7 +6,7 @@
       </Link>
     </AOS>
     <AOS animation="fade-up" class="button is-link">
-      <Link path="">
+      <Link path="https://ca.linkedin.com/in/eric-quelch-768861201">
         <LinkedinLogo width="28" height="28" />
       </Link>
     </AOS>

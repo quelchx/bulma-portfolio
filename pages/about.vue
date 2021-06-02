@@ -22,6 +22,7 @@
             :title="article.title"
             :path="article.path"
             :desc="article.desc"
+            :img="article.img"
           />
         </div>
       </div>
@@ -64,12 +65,12 @@
             </AOS>
           </div>
         </Category>
-          <Category class='mb-6' title='Experienced With' subtitle='Assets'>
-            <div v-for="(item, index) in assets" :key="index">
-              <AOS animation="fade-in">
-                <li><Chevron /> {{ item }}</li>
-              </AOS>
-            </div>
+        <Category class="mb-6" title="Experienced With" subtitle="Assets">
+          <div v-for="(item, index) in assets" :key="index">
+            <AOS animation="fade-in">
+              <li><Chevron /> {{ item }}</li>
+            </AOS>
+          </div>
         </Category>
       </div>
     </AOS>
@@ -86,13 +87,13 @@ export default {
     return {
       title: 'About Eric Quelch',
       titleTemplate: 'About Eric Quelch',
-       meta: [
+      meta: [
         {
           hid: `Information about Eric Quelch - Projects and Contributions`,
           name: `About Eric Quelch`,
-          content: `Information about Eric Quelch`
-        }
-      ]
+          content: `Information about Eric Quelch`,
+        },
+      ],
     }
   },
   components: { Chevron, Article, Category, AOS },
@@ -103,24 +104,44 @@ export default {
           title: 'The Beleaf',
           path: 'https://the-beleaf.netlify.app/',
           desc: 'Toronto Maple Leafs News',
+          img:
+            'https://cdn.shopify.com/s/files/1/2534/8132/products/ABPID09176-Toronto_20Maple_20Leafs_20Logo_20Professional_20Ice_20Hockey_20Team_20Toronto_20Ontario-convert-20200918020807011211_386ab665-f454-4821-9719-8ddf7782c8c3_1024x1024.jpg?v=1613766574',
         },
         {
           title: 'And Then Delivery',
           path: 'https://andthendelivery.netlify.app/',
           desc: 'Delivery Service And Information',
+          img:
+            'https://3xo4di2xpixr3oltj74229w9-wpengine.netdna-ssl.com/wp-content/uploads/2019/12/route-optimization-enhances-main.jpg',
         },
         {
           title: 'Perty UI Theme',
-          path: 'https://marketplace.visualstudio.com/items?itemName=ericquelch.perty',
+          path:
+            'https://marketplace.visualstudio.com/items?itemName=ericquelch.perty',
           desc: 'Visual Studio Code Editor Theme',
+          img: 'https://miro.medium.com/max/596/0*UyRcj2N9_z946tNH.png',
         },
         {
           title: 'Meme Royale',
           path: 'https://github.com/quelchx',
           desc: 'Platform for Memes',
+          img: 'https://static.wixstatic.com/media/bb1bd6_5798c09022ba43249a38bfea9be1db34~mv2.png/v1/fill/w_1000,h_571,al_c,usm_0.66_1.00_0.01/bb1bd6_5798c09022ba43249a38bfea9be1db34~mv2.png',
         },
       ],
-      lib: ['Nuxt.js', 'Buefy', 'Sass', 'AOS.js', 'Marked.js'],
+      lib: [
+        'Nuxt.js',
+        'Buefy',
+        'Sass',
+        'AOS.js',
+        'Marked.js',
+        'Firebase',
+        'Strapi CMS',
+        'Stripe',
+        'Vuex',
+        'Netlify',
+        'Heroku',
+        'MongoDB',
+      ],
       files: [
         '60+ files',
         '1.9MB',
@@ -137,12 +158,12 @@ export default {
       assets: [
         'Reactjs, Nextjs',
         'Vuejs, Nuxtjs',
-        "Sass, CSS, HTML",
+        'Sass, CSS, HTML',
         'Git, Github',
         'Nodejs, MongoDB, Firebase',
         'WordPress, PHP, Strapi',
-        'Three.js, GSAP, And more...'
-      ]
+        'Three.js, GSAP, And more...',
+      ],
     }
   },
 }
