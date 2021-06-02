@@ -36,7 +36,7 @@
 <script>
 export default {
   name: 'EditComment',
-  props: ['func', 'id', 'toggle', 'feedback', 'clear', 'modal']
+  props: ['func', 'id', 'toggle', 'feedback', 'clear', 'modal'],
 }
 </script>
 

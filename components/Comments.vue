@@ -14,7 +14,7 @@
             <i class="fas fa-edit"></i>
           </a>
 
-          <a @click='removed(id)' v-if="user === email.data.email">
+          <a @click="removed(id)" v-if="user === email.data.email">
             <i class="fas fa-trash"></i>
           </a>
 

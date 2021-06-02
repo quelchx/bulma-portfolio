@@ -35,14 +35,14 @@ export default {
     return {
       title: 'Contact Eric Quelch',
       titleTemplate: 'Contact Eric Quelch',
-       meta: [
+      meta: [
         {
           hid: `Contact Eric Quelch through this form or by email`,
           name: `Contact Eric Quelch`,
-          content: `Contact Eric Quelch throught this form or by email`
-        }
-      ]
+          content: `Contact Eric Quelch throught this form or by email`,
+        },
+      ],
     }
-  }
+  },
 }
 </script>

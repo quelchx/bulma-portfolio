@@ -1,7 +1,7 @@
 <template>
   <section class="container is-fluid mt-6 pt-6">
     <a @click="scrollToBottom" class="level-right">
-      <div class='tag is-white'>
+      <div class="tag is-white">
         <div v-if="user.loggedIn">Comment</div>
         <div v-else>Login or Register</div>
       </div>
@@ -34,7 +34,9 @@
       <article class="media" v-for="(comment, index) in comments" :key="index">
         <figure class="media-left">
           <p class="image is-64x64">
-            <img src="https://cdn.iconscout.com/icon/free/png-256/comment-2551199-2136583.png" />
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-256/comment-2551199-2136583.png"
+            />
           </p>
         </figure>
 
@@ -177,7 +179,7 @@ export default {
     },
     scrollToBottom() {
       return window.scrollTo(0, 100000)
-    }
+    },
   },
   async mounted() {
     try {

@@ -11,8 +11,10 @@
   filter: invert(0);
 }
 
-$dark-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
-$light-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+$dark-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+  rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+$light-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+  rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
 
 $dark: #2c2c2c;
 $blue: #045d91;
@@ -62,7 +64,6 @@ body {
   transition: all 0.5s ease-in;
   box-shadow: $light-shadow;
   font-family: 'Monaco' !important;
-
 
   &:hover {
     transform: scale(1.05) !important;

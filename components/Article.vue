@@ -1,10 +1,7 @@
 <template>
   <article>
     <figure class="image is-5by3">
-      <img
-        @click="redirect(path)"
-        :src="img"
-      />
+      <img @click="redirect(path)" :src="img" />
     </figure>
     <h2 class="subtitle pt-4">{{ title }}</h2>
     <Link :path="path" id="strikeout">

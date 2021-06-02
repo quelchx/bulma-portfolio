@@ -21,7 +21,10 @@
                 <span class="icon is-small is-left">
                   <i class="fas fa-envelope"></i>
                 </span>
-                <span v-if='user.email.length > 0' class="icon is-small is-right">
+                <span
+                  v-if="user.email.length > 0"
+                  class="icon is-small is-right"
+                >
                   <i class="fas fa-check"></i>
                 </span>
               </p>
@@ -38,7 +41,10 @@
                 <span class="icon is-small is-left">
                   <i class="fas fa-lock"></i>
                 </span>
-                <span v-if='user.password.length >= 8' class="icon is-small is-right">
+                <span
+                  v-if="user.password.length >= 8"
+                  class="icon is-small is-right"
+                >
                   <i class="fas fa-check"></i>
                 </span>
               </p>
