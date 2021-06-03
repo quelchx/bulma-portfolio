@@ -3,6 +3,7 @@
     <figure class="media-left">
       <p class="image is-64x64">
         <img
+        class='invert'
           src="https://cdn.iconscout.com/icon/free/png-256/comment-2551199-2136583.png"
         />
       </p>

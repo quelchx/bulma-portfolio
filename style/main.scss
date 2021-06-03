@@ -42,14 +42,73 @@ body {
   border-radius: 12px;
 }
 
-// #main, .navbar, .footer {
-//   color: white;
-//   background-color: $dark;
-// }
+a {
+  color: white;
+  &:hover { 
+    color: $dark;
+  }
+}
 
-// .navbar-item, h1, h2 {
-//   color: white !important;
-// }
+.dark {
+  #main, .navbar, .footer {
+    background: $dark !important;
+  }
+
+  .hero-body, .box, .tag {
+    background: #2f2f2f !important;
+    color: white !important;
+  }
+
+  .invert {
+    filter: invert(1) !important;
+  }
+
+  #main {
+    .nuxt-link-exact-active {
+      color: $hot !important;
+    }
+
+    .button {
+      &:hover {
+        a {color: $dark !important}
+      }
+    }
+
+    .button.is-dark, {
+      background: grey !important;
+      &:hover {
+        background: white !important;
+
+        a {
+          color: $dark !important;
+        }
+      }
+      a:hover {
+        color: $dark !important;
+      }
+    }
+
+    .button a:hover {
+      color: $dark !important;
+    }
+
+    strong, label, li, .subtitle {
+      color: steelblue !important;
+    }
+
+    .navbar-brand a.navbar-item:hover {
+      background-color: white !important;
+    }
+
+    a.navbar-item:hover {
+      color: $dark !important;
+    }
+
+    h1, h2, p, a, .title {
+      color: white !important;
+    }
+  }
+}
 
 .is-avatar {
   box-shadow: $dark-shadow;

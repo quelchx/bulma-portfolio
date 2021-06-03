@@ -1,14 +1,16 @@
 <template>
-  <main id="main">
-    <div class="container is-fluid">
-      <Navbar @display="toggle = !toggle" />
-    </div>
-    <Sidebar :show="toggle" @close="toggle = false" />
-    <div id="nuxt">
-      <Nuxt />
-    </div>
-    <Footer />
-  </main>
+  <section class='light'>
+    <main id="main">
+      <div class="container is-fluid">
+        <Navbar @display="toggle = !toggle" />
+      </div>
+      <Sidebar :show="toggle" @close="toggle = false" />
+      <div id="nuxt">
+        <Nuxt />
+      </div>
+      <Footer />
+    </main>
+  </section>
 </template>
 
 <script>

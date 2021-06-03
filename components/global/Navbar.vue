@@ -44,6 +44,10 @@
             >.logout()</a
           >
         </Tooltip>
+        <Tooltip message='Change Theme?'>
+          <a class='navbar-item' @click='toggleTheme'
+          id='strikeout'>.theme({{theme}})</a>
+        </Tooltip>
       </div>
     </div>
   </nav>
@@ -68,8 +72,20 @@ export default {
         })
     },
   },
+  methods: {
+    toggleTheme() {
+      if (this.theme === 'light') {
+        this.theme = 'dark'
+        document.querySelector('.light').className = 'dark'
+      } else {
+        this.theme = 'light'
+        document.querySelector('.dark').className = 'light'
+      }
+    }
+  },
   data() {
     return {
+      theme: 'light',
       routes: [
         {
           path: '/about',
