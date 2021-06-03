@@ -36,7 +36,12 @@ body {
 
 .footer {
   background-color: white;
+
+  a {
+      color: $purp !important;
+    }
 }
+
 
 .is-rounded {
   border-radius: 12px;
@@ -53,6 +58,7 @@ a {
   #main, .navbar, .footer {
     background: $dark !important;
   }
+
 
   .hero-body, .box, .tag {
     background: #2f2f2f !important;
