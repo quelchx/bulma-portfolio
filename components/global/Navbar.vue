@@ -71,8 +71,6 @@ export default {
           this.$router.go(this.$router.currentRoute)
         })
     },
-  },
-  methods: {
     toggleTheme() {
       if (this.theme === 'light') {
         this.theme = 'dark'

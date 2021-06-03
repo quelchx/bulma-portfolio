@@ -1,5 +1,5 @@
 <template>
-  <section class='light'>
+  <section class='light' id='theme'>
     <main id="main">
       <div class="container is-fluid">
         <Navbar @display="toggle = !toggle" />

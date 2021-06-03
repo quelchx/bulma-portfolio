@@ -14,6 +14,16 @@
               </nuxt-link>
             </li>
           </div>
+
+          <li v-if='!user.loggedIn'>
+            <nuxt-link to='/register'>.register()</nuxt-link>
+          </li>
+          <li v-if='!user.loggedIn'>
+            <nuxt-link to='/login'>.login()</nuxt-link>
+          </li>
+          <li v-if='user.loggedIn'>
+            <a @click='signout'>.logout()</a>
+          </li>
         </ul>
         <div class="end">
           <TypeWriter :array="name" />
@@ -24,12 +34,26 @@
 </template>
 
 <script>
+import firebase from 'firebase'
+import {mapGetters} from 'vuex'
 import TypeWriter from '../utils/TypeWriter.vue'
 export default {
   name: 'Sidebar',
   components: { TypeWriter },
+  computed: {...mapGetters({user: 'user'})},
+  methods: {
+    signout() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$router.go(this.$router.currentRoute)
+        })
+    },
+  },
   data() {
     return {
+      theme: 'light',
       name: ['Eric Quelch'],
       routes: [
         {

@@ -58,7 +58,12 @@ a {
   #main, .navbar, .footer {
     background: $dark !important;
   }
-
+  .menu-navbar .title {
+    color: $dark !important;
+  }
+  .menu-list a {
+    color: $dark !important;
+  }
 
   .hero-body, .box, .tag {
     background: #2f2f2f !important;
@@ -111,7 +116,7 @@ a {
     }
 
     h1, h2, p, a, .title {
-      color: white !important;
+      color: white ;
     }
   }
 }
