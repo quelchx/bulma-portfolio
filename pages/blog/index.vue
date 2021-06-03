@@ -25,7 +25,7 @@
               alt=""
             />
           </p>
-          <h1 class="title is-4">Become a Patreon (Coming Soon)</h1>
+          <h1 class="title is-4">Become a Patreon (Coming Soon!!!)</h1>
           <div class="px-2">
             <p class="block">
               Become a patreon today to get full access to the latest content

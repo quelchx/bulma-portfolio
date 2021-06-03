@@ -35,5 +35,3 @@ export default {
   props: ['func', 'feedback', 'user'],
 }
 </script>
-
-<style></style>

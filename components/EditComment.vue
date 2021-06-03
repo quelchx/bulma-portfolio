@@ -13,7 +13,6 @@
         </header>
         <section class="modal-card-body">
           <div class="field">
-            <!-- <textarea class="textarea" rows="10" v-model="edit.post"></textarea> -->
             <slot />
           </div>
           <div class="field">
@@ -39,5 +38,3 @@ export default {
   props: ['func', 'id', 'toggle', 'feedback', 'clear', 'modal'],
 }
 </script>
-
-<style></style>

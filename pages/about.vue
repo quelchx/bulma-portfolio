@@ -145,16 +145,16 @@ export default {
       ],
       files: [
         '60+ files',
-        '1.9MB',
+        '2.1MB',
         '100+ hours of thinking and testing',
-        '30+ hours of coding',
-        '200+ hours of research',
+        '50+ hours of coding',
+        'countless hours of research',
       ],
       other: [
-        '4 pots of coffee',
-        '28+ cups of java',
-        '50+ teaspoons of sugar',
-        'Added 1 Easter Egg',
+        'lost track of pots of coffee',
+        'insane amount of cups of java',
+        'heart attack amounts of sugar',
+        'Added 1 Easter Egg for you to find',
       ],
       assets: [
         'Reactjs, Nextjs',
