@@ -1,5 +1,5 @@
 <template>
-  <section class="container is-fluid mt-6 pt-6">
+  <section class="container mt-6 pt-6">
     <a @click="scrollToBottom" class="level-right">
       <div class="tag is-white">
         <div v-if="user.loggedIn">Comment</div>
@@ -11,9 +11,9 @@
     </div>
     <div v-if="err">Error: {{ err.message }}</div>
     <div class="box">
-      <h1 class="title">{{ post.title }}</h1>
-      <h2 class="px-2 subtitle subtitled">{{ post.description }}</h2>
-      <div class="block py-2 px-2 is-markdown" v-html="article" />
+      <AOS animation='fade-right' class="title">{{ post.title }}</AOS>
+      <AOS animation='fade-left' class="px-2 subtitle subtitled">{{ post.description }}</AOS>
+      <AOS animation='fade-down' class="block py-2 px-2 is-markdown" v-html="article" />
     </div>
 
     <h1 class="title is-5 has-text-centered" v-if="user.loggedIn">Posts</h1>
@@ -30,8 +30,8 @@
       not showing comments to non-registered users 
     -->
 
-    <div v-if="user.loggedIn">
-      <article class="media" v-for="(comment, index) in comments" :key="index">
+    <AOS animation='fade-in' v-if="user.loggedIn">
+      <AOS animation='fade-down' class="media" v-for="(comment, index) in comments" :key="index">
         <figure class="media-left">
           <p class="image is-64x64">
             <img
@@ -49,7 +49,7 @@
           :email="user"
           :removed="deleteComment"
         />
-      </article>
+      </AOS>
 
       <EditComment
         :func="editComment"
@@ -71,7 +71,7 @@
           :disabled="!user.loggedIn"
         ></textarea>
       </Message>
-    </div>
+    </AOS>
   </section>
 </template>
 
