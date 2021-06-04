@@ -18,7 +18,7 @@ $light-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
 
 $dark: #2c2c2c;
 $blue: #045d91;
-$purp: #580554;
+$purp: #c514bc;
 $hot: #eb540e;
 
 *,
@@ -48,7 +48,7 @@ body {
 }
 
 a {
-  color: white;
+  color: rgb(114, 114, 114);
   &:hover { 
     color: $dark;
   }
