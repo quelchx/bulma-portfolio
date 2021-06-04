@@ -47,6 +47,10 @@ body {
   border-radius: 12px;
 }
 
+.button a {
+  color: white !important;
+}
+
 a {
   color: rgb(114, 114, 114);
   &:hover { 
