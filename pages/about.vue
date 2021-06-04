@@ -36,7 +36,7 @@
         Web application was made with:
       </AOS>
       <div class="columns is-multiline">
-        <Category title="Libaries/Frameworks" subtitle="5 used">
+        <Category title="Libaries/Frameworks" :subtitle="lib.length +  '  used'">
           <div v-for="(item, index) in lib" :key="index">
             <AOS animation="fade-in">
               <li><Chevron /> {{ item }}</li>
@@ -137,7 +137,6 @@ export default {
         'Marked.js',
         'Firebase',
         'Strapi CMS',
-        'Stripe',
         'Vuex',
         'Netlify',
         'Heroku',
@@ -151,9 +150,9 @@ export default {
         'countless hours of research',
       ],
       other: [
-        'lost track of pots of coffee',
-        'insane amount of cups of java',
-        'heart attack amounts of sugar',
+        'Lost track of pots of coffee',
+        'Insane amount of cups of java',
+        'Heart attack amounts of sugar',
         'Added 1 Easter Egg for you to find',
       ],
       assets: [

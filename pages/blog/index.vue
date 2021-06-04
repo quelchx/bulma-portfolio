@@ -16,7 +16,7 @@
           is-offset-1-fullhd
         "
       >
-        <div class="column is-12">
+        <AOS animation="fade-in" class="column is-12">
           <h1 class="title is-4">Articles and Guides</h1>
           <p class="py-2">
             <img
@@ -25,26 +25,8 @@
               alt=""
             />
           </p>
-          <h1 class="title is-4">Become a Patreon (Coming Soon!!!)</h1>
           <div class="px-2">
             <p class="block">
-              Become a patreon today to get full access to the latest content
-              and guides. You will get full access to all the repositories, code
-              examples and instructions to help you get started with
-              indermediate to advanced web development.
-            </p>
-            <p class="block">
-              What I can provide is templates to get you started with things
-              such as Vue.js, CSS, HTML, JavaScript, Node.js, MongoDB, Firebase,
-              Reactjs, Nuxtjs, Nextjs, SCSS and more.
-            </p>
-            <p class="block">
-              I have put together a lot of content gathered from courses,
-              college and other sources in order to save you time -- and get you
-              into what's important straight away.
-              <strong>Help me out by becoming a patreon today!</strong>
-            </p>
-            <p class="block pt-4">
               Articles and guides to help developers like myself get going.
             </p>
             <p class="block">
@@ -58,7 +40,7 @@
               >. Link redirects to PayPal.
             </p>
           </div>
-        </div>
+        </AOS>
       </AOS>
       <AOS
         animation="fade-up"
