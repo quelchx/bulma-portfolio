@@ -40,8 +40,9 @@ export default {
     bucket: process.env.FB_STORAGE_BUCKET,
     msg_sender_id: process.env.FB_MSG_SENDER_ID,
     app_id: process.env.FB_APP_ID,
-    measurement_id: process.env.FB_MEASUREMENT_ID
-
+    measurement_id: process.env.FB_MEASUREMENT_ID,
+    strapi_url: process.env.STRAPI_URL,
+    strapi_email: process.env.STRAPI_EMAIL
   },
   pwa: {
     // have to assign a custom icon for this eventually

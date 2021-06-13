@@ -14,7 +14,7 @@
 
       <div class="columns">
         <div
-          class="column is-3"
+          class="column"
           v-for="(article, index) in articles"
           :key="index"
         >
@@ -36,7 +36,7 @@
         Web application was made with:
       </AOS>
       <div class="columns is-multiline">
-        <Category title="Libaries/Frameworks" :subtitle="lib.length +  '  used'">
+        <Category title="Libaries/Frameworks" :subtitle="lib.length + '  used'">
           <div v-for="(item, index) in lib" :key="index">
             <AOS animation="fade-in">
               <li><Chevron /> {{ item }}</li>
@@ -100,6 +100,13 @@ export default {
   data() {
     return {
       articles: [
+        {
+          title: 'Vue Writer',
+          path: 'https://www.npmjs.com/package/vue-writer',
+          desc: 'Vue 3 type writer component',
+          img:
+            'https://res.cloudinary.com/practicaldev/image/fetch/s--5NzZEMLS--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/7pryn9ls88giuc9m8cau.png',
+        },
         {
           title: 'The Beleaf',
           path: 'https://the-beleaf.netlify.app/',

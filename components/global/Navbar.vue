@@ -44,9 +44,20 @@
             >.logout()</a
           >
         </Tooltip>
-        <Tooltip message='Change Theme?'>
-          <a class='navbar-item' @click='toggleTheme'
-          id='strikeout'>.theme({{theme}})</a>
+        <Tooltip message="Authorized Users Only">
+          <a
+            target="_blank"
+            :href="url"
+            id="strikeout"
+            class="navbar-item"
+            v-if="user.loggedIn && user.data.email === email"
+            >.auth()</a
+          >
+        </Tooltip>
+        <Tooltip message="Change Theme?">
+          <a class="navbar-item" @click="toggleTheme" id="strikeout"
+            >.theme({{ theme }})</a
+          >
         </Tooltip>
       </div>
     </div>
@@ -79,10 +90,12 @@ export default {
         this.theme = 'light'
         document.querySelector('.dark').className = 'light'
       }
-    }
+    },
   },
   data() {
     return {
+      email: process.env.strapi_email,
+      url: process.env.strapi_url,
       theme: 'light',
       routes: [
         {
