@@ -1,89 +1,60 @@
 <template>
-  <div class="container is-fluid py-6">
-    <div class="columns">
-      <AOS
-        animation="fade-right"
-        class="
-          column
-          is-10-mobile
-          is-6-tablet
-          is-offset-1-tablet
-          is-5-desktop
-          is-offset-1-desktop
-          is-5-widescreen
-          is-offset-1-widescreen
-          is-5-fullhd
-          is-offset-1-fullhd
-        "
-      >
+  <div class="container is-max-desktop py-6">
+    <section class="hero">
+      <div class="hero-body">
         <AOS animation="fade-in" class="column is-12">
           <h1 class="title is-4">Articles and Guides</h1>
-          <p class="py-2">
-            <img
+          <AOS animation="slide-down" class="py-2">
+            <b-image
               class="is-rounded pb-5"
-              src="~/assets/images/main.png"
-              alt=""
+              :src="require('~/assets/images/main.png')"
+              alt="article-main-image"
             />
-          </p>
+          </AOS>
           <div class="px-2">
-            <p class="block">
-              Articles and guides to help developers like myself get going.
-            </p>
-            <p class="block">
+            <AOS animation="fade-in" class="block">
+              Articles and guides intensions are to help new developers get
+              going.
+            </AOS>
+            <AOS animation="fade-in" class="block">
               I'm always open to donations. If you wish to donate, it goes a
               long way. Donate
               <a
                 target="_blank"
+                class="link"
+                id="strikeout"
                 rel="noopener noreferrer"
                 href="https://www.paypal.com/donate?hosted_button_id=U3Z4B6SDYDDSS"
                 >here</a
               >. Link redirects to PayPal.
-            </p>
+            </AOS>
           </div>
         </AOS>
-      </AOS>
+      </div>
+    </section>
+    <div class="container is-fluid">
       <AOS
-        animation="fade-up"
-        class="
-          column
-          is-10-mobile
-          is-4-tablet
-          is-offset-1-tablet
-          is-4-desktop
-          is-offset-1-desktop
-          is-4-widescreen
-          is-offset-1-widescreen
-          is-4-fullhd
-          is-offset-1-fullhd
-        "
+        animation="fade-in"
+        class="has-text-centered"
+        v-if="!err && posts.length === 0"
       >
-        <AOS
-          animation="fade-in"
-          class="has-text-centered"
-          v-if="!err && posts.length === 0"
-        >
-          <div class="mt-6">
-            <Loading />
-          </div>
-        </AOS>
-        <AOS animation="fade-in" v-if="err">Error: {{ err.message }}</AOS>
-        <AOS animation="fade-down" class="hero">
-          <div
-            class="hero-body box"
-            v-for="(post, index) in posts"
-            :key="index"
+        <div class="mt-6">
+          <Loading />
+        </div>
+      </AOS>
+      <AOS animation="fade-in" v-if="err">Error: {{ err.message }}</AOS>
+      <AOS animation="fade-down" class="hero">
+        <div class="hero-body box" v-for="(post, index) in posts" :key="index">
+          <h2 class="subtitle subtitled">{{ post.title }}</h2>
+          <p class="py-2">Published: {{ convertDate(post.published_at) }}</p>
+          <span class="tag block"
+            >Updated: {{ convertDate(post.updatedAt) }}</span
           >
-            <h2 class="subtitle subtitled">{{ post.title }}</h2>
-            <p class="py-2">Published: {{ convertDate(post.published_at) }}</p>
-            <span class="tag block"
-              >Updated: {{ convertDate(post.updatedAt) }}</span
-            >
-            <p class="block">{{ post.description }}</p>
-            <nuxt-link class="button is-info" :to="`/blog/` + post._id"
-              >Read More</nuxt-link
-            >
-          </div>
-        </AOS>
+          <p class="block">{{ post.description }}</p>
+          <nuxt-link class="button is-info" :to="`/blog/` + post._id"
+            >Read More</nuxt-link
+          >
+        </div>
       </AOS>
     </div>
   </div>

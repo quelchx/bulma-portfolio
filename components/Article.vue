@@ -4,7 +4,7 @@
       <img @click="redirect(path)" :src="img" />
     </figure>
     <h2 class="subtitle pt-4">{{ title }}</h2>
-    <Link :path="path" id="strikeout">
+    <Link :path="path" class='heading' id="strikeout">
       {{ desc }}
     </Link>
   </article>

@@ -121,12 +121,11 @@
           <h1 class="titled title mb-6">My Stack</h1>
           <h2 class="block subtitle">
             When it comes to creating a web application -- I enjoy using
-            technologies such as Vue.js. If your wanting to get into Vue.js
-            yourself check out a package I made called <strong>Nimble</strong>.
+            technologies such as Vue.js. Check out a starting template I created for Vue called <strong>Nimble</strong>
           </h2>
           <p class="block subtitle">
-            It is based of Vue.js and Vite; Check it out to get the ball rolling
-            quickly for your next Vue.js project!
+            It is based of Vite for Vue.js; Check it out to get the ball rolling
+            quickly for your next Vue.js project! Out of the box it includes popular Vue packages such as Vuex and Vue Router preconfigured. 
           </p>
           <p class="block subtitle">
             Run <code>npx degit quelchx/nimble app</code> to try it out!
@@ -160,8 +159,7 @@
           <h1 class="title titled is-1 mb-6">Follow me on GitHub</h1>
           <h2 class="subtitle subtitled">
             Check out some of the work I'm currently doing on GitHub -- I'm very
-            active. Feel free to check me out on other these other social
-            platforms.
+            active.
           </h2>
 
           <SocialLinks />

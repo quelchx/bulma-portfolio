@@ -1,5 +1,37 @@
 <template>
   <section>
+    <div class="container is-max-desktop">
+      <section class="hero">
+        <div class="hero-body">
+          <p class="title">
+            Hello <span id="strikeout">World</span>
+          </p>
+          <p class="subtitle">
+            Thanks for stopping by.
+          </p>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              fuga quos numquam cumque velit perspiciatis quam vitae maxime
+              fugit harum autem, rerum tempora voluptatibus minima impedit
+              ratione eaque cum debitis.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+              totam nostrum laborum dolorum minus doloremque deleniti
+              voluptatibus nesciunt. Quasi ad libero quod voluptatem ratione
+              repudiandae sapiente, sunt unde molestias natus!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Dignissimos, autem odit incidunt eius dolore, accusantium soluta
+              mollitia deserunt quis sapiente neque distinctio sit deleniti,
+              ullam assumenda reprehenderit reiciendis itaque voluptatum?
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
     <AOS
       animation="fade-down"
       class="featured container is-max-desktop section"
@@ -13,11 +45,7 @@
       </AOS>
 
       <div class="columns">
-        <div
-          class="column"
-          v-for="(article, index) in articles"
-          :key="index"
-        >
+        <div class="column" v-for="(article, index) in articles" :key="index">
           <Article
             :title="article.title"
             :path="article.path"
@@ -115,13 +143,6 @@ export default {
             'https://cdn.shopify.com/s/files/1/2534/8132/products/ABPID09176-Toronto_20Maple_20Leafs_20Logo_20Professional_20Ice_20Hockey_20Team_20Toronto_20Ontario-convert-20200918020807011211_386ab665-f454-4821-9719-8ddf7782c8c3_1024x1024.jpg?v=1613766574',
         },
         {
-          title: 'And Then Delivery',
-          path: 'https://andthendelivery.netlify.app/',
-          desc: 'Delivery Service And Information',
-          img:
-            'https://media.istockphoto.com/vectors/home-delivery-shipping-on-scooter-in-smartphone-design-transport-food-vector-id1214136128?k=20&m=1214136128&s=612x612&w=0&h=5wFTQazZRJuA9pnj_oJH-DdBCbk4LhnqQ4EraAuOI7Q=',
-        },
-        {
           title: 'Perty UI Theme',
           path:
             'https://marketplace.visualstudio.com/items?itemName=ericquelch.perty',
@@ -129,11 +150,18 @@ export default {
           img: 'https://miro.medium.com/max/596/0*UyRcj2N9_z946tNH.png',
         },
         {
-          title: 'Meme Royale',
-          path: 'https://github.com/quelchx',
-          desc: 'Platform for Memes',
+          title: 'AOS-Vue',
+          path: 'https://www.npmjs.com/package/vue-writer',
+          desc: 'Animate on scroll component package for Vue 3',
           img:
-            'https://static.wixstatic.com/media/bb1bd6_5798c09022ba43249a38bfea9be1db34~mv2.png/v1/fill/w_1000,h_571,al_c,usm_0.66_1.00_0.01/bb1bd6_5798c09022ba43249a38bfea9be1db34~mv2.png',
+            'https://res.cloudinary.com/practicaldev/image/fetch/s--5NzZEMLS--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/7pryn9ls88giuc9m8cau.png',
+        },
+        {
+          title: 'And Then Delivery',
+          path: 'https://andthendelivery.netlify.app/',
+          desc: 'Delivery Service And Information',
+          img:
+            'https://media.istockphoto.com/vectors/home-delivery-shipping-on-scooter-in-smartphone-design-transport-food-vector-id1214136128?k=20&m=1214136128&s=612x612&w=0&h=5wFTQazZRJuA9pnj_oJH-DdBCbk4LhnqQ4EraAuOI7Q=',
         },
       ],
       lib: [
