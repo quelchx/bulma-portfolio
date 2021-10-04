@@ -1,7 +1,7 @@
 <template>
   <div class="container is-max-desktop py-6">
     <section class="hero">
-      <div class="hero-body">
+      <div class="hero-body mb-6">
         <AOS animation="fade-in" class="column is-12">
           <h1 class="title is-4">Articles and Guides</h1>
           <AOS animation="slide-down" class="py-2">

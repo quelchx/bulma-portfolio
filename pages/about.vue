@@ -3,30 +3,26 @@
     <div class="container is-max-desktop">
       <section class="hero">
         <div class="hero-body">
-          <p class="title">
-            Hello <span id="strikeout">World</span>
-          </p>
+          <p class="title">Hello <span id="strikeout">World</span></p>
           <p class="subtitle">
             Thanks for stopping by.
           </p>
           <div class="content">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-              fuga quos numquam cumque velit perspiciatis quam vitae maxime
-              fugit harum autem, rerum tempora voluptatibus minima impedit
-              ratione eaque cum debitis.
+              My name is Eric Quelch, and I'm an inspiring full-stack developer
+              currently living in London, Ontario. I have been developing for
+              close to four years now and love what I do. I'm very passionate
+              and am always trying to expand my skillset.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-              totam nostrum laborum dolorum minus doloremque deleniti
-              voluptatibus nesciunt. Quasi ad libero quod voluptatem ratione
-              repudiandae sapiente, sunt unde molestias natus!
+              Outside of developing I enjoy fishing very much. I'm an avid
+              angler that enjoys fishing for bass (mainly smallmouths). In my
+              spare time most likely I will be out on the local rivers.
             </p>
+
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Dignissimos, autem odit incidunt eius dolore, accusantium soluta
-              mollitia deserunt quis sapiente neque distinctio sit deleniti,
-              ullam assumenda reprehenderit reiciendis itaque voluptatum?
+              For more information about myself feel free to drop a message
+              anytime. Until then take care!
             </p>
           </div>
         </div>
@@ -191,13 +187,15 @@ export default {
         'Added 1 Easter Egg for you to find',
       ],
       assets: [
-        'Reactjs, Nextjs',
-        'Vuejs, Nuxtjs',
+        'Reactjs, Nextjs, React-Native, Expo',
+        'Vuejs, Nuxtjs, Vuex, Vue-Router',
+        'Angular, Angular CLI Typescript',
+        'Java, Python, C#',
         'Sass, CSS, HTML',
-        'Git, Github',
+        'Git, Github, Github CLI',
         'Nodejs, MongoDB, Firebase',
         'WordPress, PHP, Strapi',
-        'Three.js, GSAP, And more...',
+        'Three.js, GSAP, and much more...',
       ],
     }
   },
@@ -208,5 +206,11 @@ export default {
 svg {
   width: 16px;
   height: 16px;
+}
+
+.carousel-images {
+  max-width: 800px;
+  max-height: 800px;
+  border-radius: 10px;
 }
 </style>
