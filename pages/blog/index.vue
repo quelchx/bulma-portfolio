@@ -8,6 +8,7 @@
             <b-image
               class="is-rounded pb-5"
               :src="require('~/assets/images/main.png')"
+              style="max-width: 600px"
               alt="article-main-image"
             />
           </AOS>
