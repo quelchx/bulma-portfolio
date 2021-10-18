@@ -101,7 +101,6 @@
 
 <script>
 import firebase from 'firebase'
-import { mapGetters } from 'vuex'
 import AOS from '../components/AOS.vue'
 import Field from '../components/utils/Field.vue'
 import Heading from '../components/utils/Heading.vue'

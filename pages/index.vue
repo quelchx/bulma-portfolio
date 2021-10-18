@@ -253,16 +253,13 @@ import TypeWriter from '@/components/utils/TypeWriter.vue'
 import GithubLogo from '@/assets/GithubLogo.vue'
 import SocialLinks from '@/components/SocialLinks.vue'
 
+import articles from '~/api/articles'
+import meta from '~/api/meta'
+
 export default {
   head() {
     return {
-      meta: [
-        {
-          hid: `Eric Quelch's personal portfolio and resume`,
-          name: `Eric Quelch's landing page for personal portfolio and resume`,
-          content: `Information about Eric Quelch and his experience with web development`,
-        },
-      ],
+      meta: meta.index
     }
   },
   components: {
@@ -275,25 +272,8 @@ export default {
   },
   data() {
     return {
-      arr: [
-        'Full Stack Web Developer',
-        'Tutor',
-        'Geek',
-        'Team Leader',
-        'Is Hilarious',
-        'Passionate',
-        'Dedicated',
-        'I am Eric Quelch',
-      ],
-      looking: [
-        'developer and design',
-        'illustrations, animations and effects',
-        'search engine optimization',
-        'backend solutions, authorization, security',
-        'e-commerence and payment methods',
-        'leadership, support, problem solving, and clever thinking',
-        'I am much, much more -- improving each and everyday!',
-      ],
+      arr: articles.about,
+      looking: articles.looking,
       counter: 0,
       solved: false,
     }
@@ -320,8 +300,6 @@ code {
   color: #476333 !important;
   border-radius: 5px !important;
 }
-
-
 
 @media (max-width: 1200px) {
   .has-logo {

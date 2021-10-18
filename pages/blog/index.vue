@@ -65,19 +65,15 @@
 import AOS from '@/components/AOS.vue'
 import Loading from '@/components/utils/Loading.vue'
 
+import meta from '~/api/meta'
+
 export default {
   components: { AOS, Loading },
   head() {
     return {
       title: 'Articles and Guides',
       titleTemplate: 'Articles and Guides',
-      meta: [
-        {
-          hid: `Eric Quelch - Articles and Guides`,
-          name: `Articles and Guides by Eric Quelch`,
-          content: `Read articles and guides writen by Eric Quelch`,
-        },
-      ],
+      meta: meta.articles,
     }
   },
   async beforeCreate() {

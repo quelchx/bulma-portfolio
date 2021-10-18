@@ -34,19 +34,15 @@ import Hero from '../components/Hero.vue'
 import Form from '../components/plugin/Form.vue'
 import AOS from '../components/AOS.vue'
 import SocialLinks from '../components/SocialLinks.vue'
+
+import meta from '~/api/meta'
 export default {
   components: { Hero, AOS, Form, SocialLinks },
   head() {
     return {
       title: 'Contact Eric Quelch',
       titleTemplate: 'Contact Eric Quelch',
-      meta: [
-        {
-          hid: `Contact Eric Quelch through this form or by email`,
-          name: `Contact Eric Quelch`,
-          content: `Contact Eric Quelch throught this form or by email`,
-        },
-      ],
+      meta: meta.contact,
     }
   },
 }

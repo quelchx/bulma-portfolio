@@ -114,18 +114,14 @@ import Category from '../components/Category.vue'
 import AOS from '../components/AOS.vue'
 
 import articles from '~/api/articles'
+import meta from '~/api/meta'
+
 export default {
   head() {
     return {
       title: 'About Eric Quelch',
       titleTemplate: 'About Eric Quelch',
-      meta: [
-        {
-          hid: `Information about Eric Quelch - Projects and Contributions`,
-          name: `About Eric Quelch`,
-          content: `Information about Eric Quelch`,
-        },
-      ],
+      meta: meta.about,
     }
   },
   components: { Chevron, Article, Category, AOS },

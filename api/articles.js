@@ -1,4 +1,23 @@
 const articles = {
+  about: [
+    'Full Stack Web Developer',
+    'Tutor',
+    'Geek',
+    'Team Leader',
+    'Is Hilarious',
+    'Passionate',
+    'Dedicated',
+    'I am Eric Quelch',
+  ],
+  looking: [
+    'developer and design',
+    'illustrations, animations and effects',
+    'search engine optimization',
+    'backend solutions, authorization, security',
+    'e-commerence and payment methods',
+    'leadership, support, problem solving, and clever thinking',
+    'I am much, much more -- improving each and everyday!',
+  ],
   work: [
     {
       title: 'Vue Writer',
