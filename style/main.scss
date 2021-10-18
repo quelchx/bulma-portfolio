@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 @mixin addHover($color) {
-  background-color: white !important;
+  background-color: rgb(78, 74, 74) !important;
   color: $color;
   border: 1px solid $color;
 }
@@ -18,7 +18,7 @@ $light-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
 
 $dark: #2c2c2c;
 $blue: #045d91;
-$purp: #c514bc;
+$purp: #6b2468;
 $hot: #eb540e;
 
 *,
@@ -38,8 +38,8 @@ body {
   background-color: white;
 
   a {
-      color: $purp !important;
-    }
+    color: $purp !important;
+  }
 }
 
 .is-rounded {
@@ -51,14 +51,16 @@ body {
 }
 
 a {
-  color: rgb(114, 114, 114);
-  &:hover { 
+  color: #727272;
+  &:hover {
     color: $dark;
   }
 }
 
 .dark {
-  #main, .navbar, .footer {
+  #main,
+  .navbar,
+  .footer {
     background: $dark !important;
   }
   .menu-navbar .title {
@@ -68,7 +70,9 @@ a {
     color: $dark !important;
   }
 
-  .hero-body, .box, .tag {
+  .hero-body,
+  .box,
+  .tag {
     background: #2f2f2f !important;
     color: white !important;
   }
@@ -84,11 +88,13 @@ a {
 
     .button {
       &:hover {
-        a {color: $dark !important}
+        a {
+          color: $dark !important;
+        }
       }
     }
 
-    .button.is-dark, {
+    .button.is-dark {
       background: grey !important;
       &:hover {
         background: white !important;
@@ -98,15 +104,18 @@ a {
         }
       }
       a:hover {
-        color: $dark !important;
+        color:  #689213 !important;
       }
     }
 
     .button a:hover {
-      color: $dark !important;
+      color: #689213 !important;
     }
 
-    strong, label, li, .subtitle {
+    strong,
+    label,
+    li,
+    .subtitle {
       color: steelblue !important;
     }
 
@@ -118,8 +127,12 @@ a {
       color: $dark !important;
     }
 
-    h1, h2, p, a, .title {
-      color: white ;
+    h1,
+    h2,
+    p,
+    a,
+    .title {
+      color: white;
     }
   }
 }
@@ -184,7 +197,7 @@ a {
 }
 
 .is-link {
-  color: $hot !important;
+  color: #3f9c5e !important;
 }
 
 .is-typed {
@@ -228,5 +241,95 @@ a {
   }
   100% {
     text-decoration: underline;
+  }
+}
+
+.is-image {
+  position: relative;
+  top: 40%;
+  right: -44%;
+  transform: translate(60%);
+  padding-bottom: 200px;
+}
+
+@media (max-width: 778px) {
+  .is-image {
+    position: static;
+    padding-top: 20px;
+    transform: translate(0%);
+  }
+}
+
+.contact-image {
+  position: absolute;
+  top: -60%;
+  right: 60%;
+  transform: translate(3%);
+}
+
+@media (max-width: 1516px) {
+  .contact-image {
+  position: absolute;
+    top: -10%;
+    z-index: 1000;
+    right: -60%;
+    transform: translate(90%,-80%);
+  }
+}
+
+@media (max-width: 778px) {
+  .contact-image {
+    position: static;
+    padding-top: 20px;
+    transform: translate(0%);
+  }
+}
+
+.index-svg {
+  position: relative;
+  right: -20%;
+  top: -2%;
+  z-index: -1000;
+  max-width: 500px;
+  padding-bottom: 100px;
+  padding-top: 40px;
+  animation: indexSVG 3s infinite;
+
+  @media (max-width: 951px) {
+    position: static;
+    animation: github 1s infinite;
+  }
+
+  @media (max-width: 551px) {
+    max-width: 300px;
+    padding-top: 60px;
+  }
+}
+
+#github {
+  animation: github 2s infinite;
+}
+
+@keyframes indexSVG {
+  30% {
+    transform: translateX(0px);
+  }
+  60% {
+    transform: translateX(20px);
+  }
+  90% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes github {
+  30% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(1px);
+  }
+  90% {
+    transform: translateY(0px);
   }
 }

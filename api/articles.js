@@ -8,6 +8,13 @@ const articles = {
         'https://res.cloudinary.com/practicaldev/image/fetch/s--5NzZEMLS--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/7pryn9ls88giuc9m8cau.png',
     },
     {
+      title: 'AOS-Vue',
+      path: 'https://www.npmjs.com/package/vue-writer',
+      desc: 'Animate on scroll component package for Vue 3',
+      img:
+        'https://res.cloudinary.com/practicaldev/image/fetch/s--5NzZEMLS--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/7pryn9ls88giuc9m8cau.png',
+    },
+    {
       title: 'The Beleaf',
       path: 'https://the-beleaf.netlify.app/',
       desc: 'Toronto Maple Leafs News',
@@ -20,13 +27,6 @@ const articles = {
         'https://marketplace.visualstudio.com/items?itemName=ericquelch.perty',
       desc: 'Visual Studio Code Editor Theme',
       img: 'https://miro.medium.com/max/596/0*UyRcj2N9_z946tNH.png',
-    },
-    {
-      title: 'AOS-Vue',
-      path: 'https://www.npmjs.com/package/vue-writer',
-      desc: 'Animate on scroll component package for Vue 3',
-      img:
-        'https://res.cloudinary.com/practicaldev/image/fetch/s--5NzZEMLS--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/7pryn9ls88giuc9m8cau.png',
     },
     {
       title: 'And Then Delivery',

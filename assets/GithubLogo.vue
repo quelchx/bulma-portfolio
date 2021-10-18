@@ -19,19 +19,5 @@ export default {
 </script>
 
 <style lang="scss">
-#github {
-  animation: github 1s infinite;
-}
 
-@keyframes github {
-  30% {
-    transform: translateY(0px);
-  }
-  60% {
-    transform: translateY(1px);
-  }
-  90% {
-    transform: translateY(0px);
-  }
-}
 </style>

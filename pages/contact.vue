@@ -6,6 +6,11 @@
           animation="fade-right"
           class="column is-10-mobile is-offset-1-mobile pt-5"
         >
+          <img
+            :src="require('~/assets/svg/undraw_contact_us_15o2.svg')"
+            alt="contact"
+            class="contact-image"
+          />
           <h1 class="title titled is-2">Wanna Talk?</h1>
           <h2 class="subtitle subtitled is-4">
             Have a question? Feel free to contact me here or reach out to me on

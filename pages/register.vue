@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-3 container is-fluid">
+  <section class="mt-3 container is-fluid" style="padding-bottom: 140px">
     <div class="columns pb-6">
       <AOS animation="fade-up" class="column is-4 is-offset-1">
         <Heading title="Why Register">

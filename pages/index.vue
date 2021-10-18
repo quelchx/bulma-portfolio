@@ -121,11 +121,13 @@
           <h1 class="titled title mb-6">My Stack</h1>
           <h2 class="block subtitle">
             When it comes to creating a web application -- I enjoy using
-            technologies such as Vue.js. Check out a starting template I created for Vue called <strong>Nimble</strong>
+            technologies such as Vue.js. Check out a starting template I created
+            for Vue called <strong>Nimble</strong>
           </h2>
           <p class="block subtitle">
             It is based of Vite for Vue.js; Check it out to get the ball rolling
-            quickly for your next Vue.js project! Out of the box it includes popular Vue packages such as Vuex and Vue Router preconfigured. 
+            quickly for your next Vue.js project! Out of the box it includes
+            popular Vue packages such as Vuex and Vue Router preconfigured.
           </p>
           <p class="block subtitle">
             Run <code>npx degit quelchx/nimble app</code> to try it out!
@@ -201,6 +203,7 @@
               Are you looking for:
             </TypeWriter>
           </h1>
+
           <h2 class="subtitle subtitled">
             I'm currently availible for hire! Feel free to reach out to me by
             emailing me through this
@@ -211,6 +214,11 @@
               >here</router-link
             >.
           </h2>
+          <img
+            class="index-svg"
+            :src="require('~/assets/svg/undraw_Developer_activity_re_39tg.svg')"
+            alt="index-svg"
+          />
         </AOS>
       </div>
       <div v-if="solved">
@@ -312,6 +320,8 @@ code {
   color: #476333 !important;
   border-radius: 5px !important;
 }
+
+
 
 @media (max-width: 1200px) {
   .has-logo {

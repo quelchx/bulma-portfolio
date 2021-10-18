@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container" style="padding-bottom: 140px;">
     <div class="has-text-centered pt-6">
       <h1 class="title">Welcome Back</h1>
       <h2 class="subtitle">Need to Login?</h2>

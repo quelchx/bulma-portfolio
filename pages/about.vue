@@ -7,7 +7,13 @@
           <p class="subtitle">
             Thanks for stopping by.
           </p>
-          <div class="content">
+          <AOS animation="fade-down" class="section">
+            <img
+              :src="require('~/assets/svg/undraw_profile_details_f8b7.svg')"
+              alt="profile-svg"
+            />
+          </AOS>
+          <AOS animation="fade-up" class="content">
             <p>
               My name is Eric Quelch, and I'm an inspiring full-stack developer
               currently living in London, Ontario. I have been developing for
@@ -24,7 +30,7 @@
               For more information about myself feel free to drop a message
               anytime. Until then take care!
             </p>
-          </div>
+          </AOS>
         </div>
       </section>
     </div>
@@ -140,10 +146,9 @@ svg {
   width: 16px;
   height: 16px;
 }
-
-.carousel-images {
-  max-width: 800px;
-  max-height: 800px;
-  border-radius: 10px;
-}
+// .carousel-images {
+//   max-width: 800px;
+//   max-height: 800px;
+//   border-radius: 10px;
+// }
 </style>
